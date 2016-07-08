@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="76788" started-at="2016-07-08T18:04:01Z" finished-at="2016-07-08T18:05:18Z">
+  <suite name="Suite" duration-ms="65574" started-at="2016-07-08T18:06:27Z" finished-at="2016-07-08T18:07:32Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="76788" started-at="2016-07-08T18:04:01Z" finished-at="2016-07-08T18:05:18Z">
+    <test name="Test" duration-ms="65574" started-at="2016-07-08T18:06:27Z" finished-at="2016-07-08T18:07:32Z">
       <class name="testcases.CRMTest">
-        <test-method status="PASS" signature="getBrowser(java.lang.String)[pri:0, instance:testcases.CRMTest@16c0663d]" name="getBrowser" is-config="true" duration-ms="16677" started-at="2016-07-08T23:34:01Z" finished-at="2016-07-08T23:34:18Z">
+        <test-method status="PASS" signature="getBrowser(java.lang.String)[pri:0, instance:testcases.CRMTest@16c0663d]" name="getBrowser" is-config="true" duration-ms="15033" started-at="2016-07-08T23:36:27Z" finished-at="2016-07-08T23:36:42Z">
           <params>
             <param index="0">
               <value>
@@ -18,32 +18,34 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBrowser -->
-        <test-method status="FAIL" signature="createContact()[pri:0, instance:testcases.CRMTest@16c0663d]" name="createContact" duration-ms="10111" started-at="2016-07-08T23:34:18Z" finished-at="2016-07-08T23:34:28Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:testcases.CRMTest@16c0663d]" name="validLogin" duration-ms="46371" started-at="2016-07-08T23:36:42Z" finished-at="2016-07-08T23:37:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method status="FAIL" signature="createContact()[pri:0, instance:testcases.CRMTest@16c0663d]" name="createContact" duration-ms="2065" started-at="2016-07-08T23:37:28Z" finished-at="2016-07-08T23:37:30Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Contacts Tab']"}
+              <![CDATA[chrome not reachable
   (Session info: chrome=51.0.2704.103)
   (Driver info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Command duration or timeout: 2.05 seconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'Mukesh', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_91'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=C:\Users\MUKESH~1\AppData\Local\Temp\scoped_dir11336_5056}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=51.0.2704.103, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5c9aec315404b779a29fee2cf5b9a964
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=C:\Users\MUKESH~1\AppData\Local\Temp\scoped_dir11276_6891}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=51.0.2704.103, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a27c1de41645223c1da6eec542d8917c
 *** Element info: {Using=xpath, value=//a[@title='Contacts Tab']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Contacts Tab']"}
+              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=51.0.2704.103)
   (Driver info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Command duration or timeout: 2.05 seconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'Mukesh', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_91'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=C:\Users\MUKESH~1\AppData\Local\Temp\scoped_dir11336_5056}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=51.0.2704.103, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5c9aec315404b779a29fee2cf5b9a964
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=C:\Users\MUKESH~1\AppData\Local\Temp\scoped_dir11276_6891}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=51.0.2704.103, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a27c1de41645223c1da6eec542d8917c
 *** Element info: {Using=xpath, value=//a[@title='Contacts Tab']}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -95,15 +97,11 @@ Session ID: 5c9aec315404b779a29fee2cf5b9a964
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContact -->
-        <test-method status="PASS" signature="validLogin()[pri:0, instance:testcases.CRMTest@16c0663d]" name="validLogin" duration-ms="47323" started-at="2016-07-08T23:34:28Z" finished-at="2016-07-08T23:35:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.CRMTest@16c0663d]" name="tearDown" is-config="true" duration-ms="2630" started-at="2016-07-08T23:35:15Z" finished-at="2016-07-08T23:35:18Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.CRMTest@16c0663d]" name="tearDown" is-config="true" duration-ms="2038" started-at="2016-07-08T23:37:30Z" finished-at="2016-07-08T23:37:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
