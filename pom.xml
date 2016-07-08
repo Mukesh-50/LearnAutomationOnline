@@ -69,8 +69,11 @@
 </suiteXmlFiles>
  
  <properties>
-    <url>${url}</url>
+    
     <browser>${browser}</browser>
+    <url>${url}</url>
+    <username>${username}</username>
+    <password>${password}</password>
 </properties>
  
 </configuration>

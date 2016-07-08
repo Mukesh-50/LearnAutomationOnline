@@ -15,11 +15,17 @@ import factory.DataProviderFactory;
 public class BaseClass 
 {
 	protected static WebDriver driver;
+	public static String Url;
+	public static String userName;
+	public static String passWord;
 	
-	@Parameters("browser")
+	@Parameters({"browser","url","username","password"})
     @BeforeTest
-	public static WebDriver getBrowser(String browserName)
+	public static WebDriver getBrowser(String browserName,String url,String username,String password)
 	{
+		Url=url;
+		userName=username;
+		passWord=password;
 		
 		if(browserName.equalsIgnoreCase("firefox"))
 		{
@@ -42,7 +48,7 @@ public class BaseClass
 		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-		driver.get(DataProviderFactory.getConfig().getApplicationUrl());
+		driver.get(BaseClass.Url);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
 		

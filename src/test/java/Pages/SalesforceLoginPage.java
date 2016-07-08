@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import utility.BaseClass;
 import utility.Helper;
 
 public class SalesforceLoginPage 
@@ -26,9 +27,9 @@ public class SalesforceLoginPage
 	public void loginToSalesforce()
 	{
 	
-		Helper.highLightElement(driver, username).sendKeys("mukeshotwani@learn-automation.com");
+		Helper.highLightElement(driver, username).sendKeys(BaseClass.userName);
 		
-	    Helper.highLightElement(driver, password).sendKeys("titan@5000");
+	    Helper.highLightElement(driver, password).sendKeys(BaseClass.passWord);
 	    
 	    Helper.highLightElement(driver, loginButton).click();
 	   
