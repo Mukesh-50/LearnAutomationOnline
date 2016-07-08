@@ -1,4 +1,4 @@
-package factory;
+package utility;
 
 import java.util.concurrent.TimeUnit;
 
@@ -6,12 +6,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
-public class BrowserFactory 
+import factory.DataProviderFactory;
+
+public class BaseClass 
 {
-
-	static WebDriver driver;
+	protected static WebDriver driver;
 	
+	@Parameters("browser")
+    @BeforeTest
 	public static WebDriver getBrowser(String browserName)
 	{
 		
@@ -35,16 +41,18 @@ public class BrowserFactory
 		}
 		
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.get(DataProviderFactory.getConfig().getApplicationUrl());
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
 		
 	}
 	
-	public static void closeBrowser(WebDriver ldriver)
+	@AfterTest
+	public void tearDown()
 	{
-		ldriver.quit();
+		driver.quit();
+		
 	}
-	
 	
 }
