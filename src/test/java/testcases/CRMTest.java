@@ -2,7 +2,6 @@ package testcases;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import Pages.SalesforceContactPage;
 import Pages.SalesforceLoginPage;
 import utility.BaseClass;

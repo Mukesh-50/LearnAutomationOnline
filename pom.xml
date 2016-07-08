@@ -61,8 +61,13 @@
 <configuration>
  
 <suiteXmlFiles>
-<suiteXmlFile>Regression.xml</suiteXmlFile>
+<suiteXmlFile>SalesforceTest.xml</suiteXmlFile>
 </suiteXmlFiles>
+ 
+ <properties>
+    <url>${url}</url>
+    <browser>${browser}</browser>
+</properties>
  
 </configuration>
 </plugin>
