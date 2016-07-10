@@ -3,6 +3,8 @@ package Pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utility.Helper;
 
@@ -28,6 +30,7 @@ public class SalesforceContactPage
 	
 	public void createContacts()
 	{
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(contactTab));
 		Helper.highLightElement(driver, contactTab).click();
 		Helper.highLightElement(driver, newButton).click();
 		Helper.highLightElement(driver, lastName).sendKeys("Selenium 1");

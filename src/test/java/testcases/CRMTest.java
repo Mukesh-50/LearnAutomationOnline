@@ -17,7 +17,7 @@ public class CRMTest extends BaseClass{
 	 
 	 login.loginToSalesforce();
 	 
-	 Thread.sleep(40000);
+	 
 	}
 	
 	@Test(priority=1)
