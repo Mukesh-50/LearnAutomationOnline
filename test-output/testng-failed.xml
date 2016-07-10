@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" parallel="none">
-  <parameter name="browser" value="chrome"/>
-  <test name="Test(failed)" parallel="none">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="testcases.CRMTest">
+      <class name="testcases.StartChrome">
         <methods>
-          <include name="getBrowser"/>
-          <include name="tearDown"/>
-          <include name="createContact"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- testcases.CRMTest -->
+      </class> <!-- testcases.StartChrome -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -2,6 +2,9 @@ package utility;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
@@ -52,6 +55,19 @@ public class Helper {
 				element);
 
 		return element;
+	}
+	
+	public static String getCurrentDateTime()
+	{
+		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+		 
+		 //get current date time with Date()
+		 Date date = new Date();
+		 
+		 // Now format the date
+		 String datenew= dateFormat.format(date);
+		 
+		 return datenew;
 	}
 
 }

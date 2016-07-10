@@ -35,4 +35,15 @@ public class SalesforceLoginPage
 	   
 	}
 	
+	public void loginToMobileSalesforce()
+	{
+	
+		Helper.highLightElement(driver, username).sendKeys("mukeshotwani@learn-automation.com");
+		
+	    Helper.highLightElement(driver, password).sendKeys("titan@5000");
+	    
+	    Helper.highLightElement(driver, loginButton).click();
+	   
+	}
+	
 }

@@ -7,8 +7,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
+
+import com.relevantcodes.extentreports.ExtentReports;
 
 import factory.DataProviderFactory;
 
@@ -18,6 +21,15 @@ public class BaseClass
 	public static String Url;
 	public static String userName;
 	public static String passWord;
+	
+	ExtentReports report;
+	
+	@BeforeSuite
+	public void setupReport()
+	{
+		report=new ExtentReports(System.getProperty("user.dir")+"\\Reports\\Salesforce"+Helper.getCurrentDateTime()+".html");
+	}
+	
 	
 	@Parameters({"browser","url","username","password"})
     @BeforeTest
@@ -34,9 +46,7 @@ public class BaseClass
 		}
 		else if(browserName.equalsIgnoreCase("Chrome"))
 		{
-			
 			System.setProperty("webdriver.chrome.driver",DataProviderFactory.getConfig().getChromePath());
-			
 			driver=new ChromeDriver();
 		}
 		else if(browserName.equalsIgnoreCase("IE"))
@@ -59,6 +69,13 @@ public class BaseClass
 	{
 		driver.quit();
 		
+	}
+	
+	
+	public void generateReport()
+	{
+		report.close();
+		report.flush();
 	}
 	
 }
