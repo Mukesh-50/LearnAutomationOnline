@@ -59,7 +59,7 @@ public class Helper {
 	
 	public static String getCurrentDateTime()
 	{
-		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+		DateFormat dateFormat = new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss");
 		 
 		 //get current date time with Date()
 		 Date date = new Date();
