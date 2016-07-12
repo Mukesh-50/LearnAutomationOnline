@@ -30,11 +30,9 @@ public class SalesforceLoginPage extends BaseClass
 	{
 	
 		Helper.highLightElement(driver, username).sendKeys(BaseClass.userName);
-		
 	    Helper.highLightElement(driver, password).sendKeys(BaseClass.passWord);
-	    
-	    logger.log(LogStatus.INFO, "Login Page ");
-	    logger.log(LogStatus.INFO,logger.addScreenCapture(Helper.captureScreenshot(driver, "Login")));
+	    logger.log(LogStatus.INFO, "Login Page");
+	    logger.log(LogStatus.INFO,"Login Screen",logger.addScreenCapture(Helper.captureScreenshot(driver, "Login")));
 	    Helper.highLightElement(driver, loginButton).click();
 	   
 	}
