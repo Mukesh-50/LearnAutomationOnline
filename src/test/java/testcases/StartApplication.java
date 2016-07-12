@@ -10,7 +10,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
-public class StartApplication
+import com.relevantcodes.extentreports.LogStatus;
+
+import utility.Helper;
+import utility.MobileBaseClass;
+
+public class StartApplication extends MobileBaseClass
 {
 	WebDriver driver;
     @Test
@@ -35,9 +40,9 @@ public class StartApplication
 		} catch (Exception e) {
 			
 		}
-    	
+    	logger=report.startTest("Test Native Application");
     	driver.findElement(By.xpath("//android.widget.EditText[@content-desc='my_text_fieldCD']")).sendKeys("Mukesh Selenium Appium");
-    	
+        logger.log(LogStatus.INFO,logger.addScreenCapture(Helper.captureScreenshot(driver, "Login")));
     	
 	}
 	

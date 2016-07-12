@@ -6,12 +6,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 
 import factory.DataProviderFactory;
 
@@ -22,7 +25,8 @@ public class BaseClass
 	public static String userName;
 	public static String passWord;
 	
-	ExtentReports report;
+	protected ExtentReports report;
+	protected ExtentTest logger;
 	
 	@BeforeSuite
 	public void setupReport()
@@ -64,6 +68,14 @@ public class BaseClass
 		
 	}
 	
+	@AfterMethod
+	public void tearDownReport()
+	{
+		report.endTest(logger);
+		
+		
+	}
+	
 	@AfterTest
 	public void tearDown()
 	{
@@ -71,7 +83,7 @@ public class BaseClass
 		
 	}
 	
-	
+	@AfterSuite
 	public void generateReport()
 	{
 		report.close();

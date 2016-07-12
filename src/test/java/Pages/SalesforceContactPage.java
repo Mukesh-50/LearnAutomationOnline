@@ -6,9 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.relevantcodes.extentreports.LogStatus;
+
+import utility.BaseClass;
 import utility.Helper;
 
-public class SalesforceContactPage 
+public class SalesforceContactPage extends BaseClass
 {
 
 	WebDriver driver;
@@ -35,6 +38,8 @@ public class SalesforceContactPage
 		Helper.highLightElement(driver, newButton).click();
 		Helper.highLightElement(driver, lastName).sendKeys("Selenium 1");
 		Helper.highLightElement(driver, saveButton).click();
+		logger.log(LogStatus.INFO, "Contact created");
+	    logger.log(LogStatus.INFO,logger.addScreenCapture(Helper.captureScreenshot(driver, "Contact created")));
 	}
 	
 	

@@ -4,10 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.relevantcodes.extentreports.LogStatus;
+
 import utility.BaseClass;
 import utility.Helper;
 
-public class SalesforceLoginPage 
+public class SalesforceLoginPage extends BaseClass
 {
 
 	WebDriver driver;
@@ -31,6 +33,8 @@ public class SalesforceLoginPage
 		
 	    Helper.highLightElement(driver, password).sendKeys(BaseClass.passWord);
 	    
+	    logger.log(LogStatus.INFO, "Login Page ");
+	    logger.log(LogStatus.INFO,logger.addScreenCapture(Helper.captureScreenshot(driver, "Login")));
 	    Helper.highLightElement(driver, loginButton).click();
 	   
 	}

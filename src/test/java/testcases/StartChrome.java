@@ -12,9 +12,10 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
+import utility.MobileBaseClass;
 import Pages.SalesforceLoginPage;
 
-public class StartChrome
+public class StartChrome extends MobileBaseClass
 {
 	WebDriver driver;
     @Test
@@ -37,7 +38,7 @@ public class StartChrome
 		} catch (Exception e) {
 			
 		}
-    	
+    	logger=report.startTest("Test Salesforce on Mobile Chrome");
     	 SalesforceLoginPage login=PageFactory.initElements(driver, SalesforceLoginPage.class);
     	 
     	 login.loginToMobileSalesforce();
