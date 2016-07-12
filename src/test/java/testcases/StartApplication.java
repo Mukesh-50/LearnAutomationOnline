@@ -40,9 +40,9 @@ public class StartApplication extends MobileBaseClass
 		} catch (Exception e) {
 			
 		}
-    	logger=report.startTest("Test Native Application");
+    	MobileBaseClass.logger=report.startTest("Test Native Application");
     	driver.findElement(By.xpath("//android.widget.EditText[@content-desc='my_text_fieldCD']")).sendKeys("Mukesh Selenium Appium");
-        logger.log(LogStatus.INFO,logger.addScreenCapture(Helper.captureScreenshot(driver, "Login")));
+    	MobileBaseClass.logger.log(LogStatus.INFO,MobileBaseClass.logger.addScreenCapture(Helper.captureScreenshot(driver, "Login")));
     	
 	}
 	

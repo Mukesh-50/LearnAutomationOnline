@@ -13,7 +13,7 @@ public class MobileBaseClass
 {
 	protected static WebDriver driver;
 	protected ExtentReports report;
-	protected ExtentTest logger;
+	public static ExtentTest logger;
 	
 	@BeforeSuite
 	public void setupReport()
@@ -40,7 +40,6 @@ public class MobileBaseClass
 	@AfterSuite
 	public void generateReport()
 	{
-		report.close();
 		report.flush();
 	}
 	

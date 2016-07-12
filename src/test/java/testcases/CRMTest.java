@@ -13,7 +13,7 @@ public class CRMTest extends BaseClass{
 	public void validLogin() throws InterruptedException
 	{
 	
-	 logger=report.startTest("Valid login");	
+	 BaseClass.logger=report.startTest("Valid login");	
 		
 	 SalesforceLoginPage login=PageFactory.initElements(driver, SalesforceLoginPage.class);
 	 

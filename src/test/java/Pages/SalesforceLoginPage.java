@@ -8,6 +8,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import utility.BaseClass;
 import utility.Helper;
+import utility.MobileBaseClass;
 
 public class SalesforceLoginPage extends BaseClass
 {
@@ -31,8 +32,9 @@ public class SalesforceLoginPage extends BaseClass
 	
 		Helper.highLightElement(driver, username).sendKeys(BaseClass.userName);
 	    Helper.highLightElement(driver, password).sendKeys(BaseClass.passWord);
-	    logger.log(LogStatus.INFO, "Login Page");
-	    logger.log(LogStatus.INFO,"Login Screen",logger.addScreenCapture(Helper.captureScreenshot(driver, "Login")));
+	  
+	    BaseClass.logger.log(LogStatus.INFO, "Login Page");
+	    BaseClass.logger.log(LogStatus.INFO,"Login Screen",BaseClass.logger.addScreenCapture(Helper.captureScreenshot(driver, "Login")));
 	    Helper.highLightElement(driver, loginButton).click();
 	   
 	}
@@ -43,7 +45,7 @@ public class SalesforceLoginPage extends BaseClass
 		Helper.highLightElement(driver, username).sendKeys("mukeshotwani@learn-automation.com");
 		
 	    Helper.highLightElement(driver, password).sendKeys("titan@5000");
-	    
+	    MobileBaseClass.logger.log(LogStatus.INFO,"Login Screen",MobileBaseClass.logger.addScreenCapture(Helper.captureScreenshot(driver, "Login")));
 	    Helper.highLightElement(driver, loginButton).click();
 	   
 	}

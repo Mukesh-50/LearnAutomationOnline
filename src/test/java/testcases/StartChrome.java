@@ -38,7 +38,7 @@ public class StartChrome extends MobileBaseClass
 		} catch (Exception e) {
 			
 		}
-    	logger=report.startTest("Test Salesforce on Mobile Chrome");
+    	 MobileBaseClass.logger=report.startTest("Test Salesforce on Mobile Chrome");
     	 SalesforceLoginPage login=PageFactory.initElements(driver, SalesforceLoginPage.class);
     	 
     	 login.loginToMobileSalesforce();

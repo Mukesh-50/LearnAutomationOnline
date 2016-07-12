@@ -26,7 +26,7 @@ public class BaseClass
 	public static String passWord;
 	
 	protected ExtentReports report;
-	protected ExtentTest logger;
+	protected static ExtentTest logger;
 	
 	@BeforeSuite
 	public void setupReport()
@@ -71,7 +71,7 @@ public class BaseClass
 	@AfterMethod
 	public void tearDownReport()
 	{
-		report.endTest(logger);
+		report.endTest(BaseClass.logger);
 		
 		
 	}
@@ -86,7 +86,6 @@ public class BaseClass
 	@AfterSuite
 	public void generateReport()
 	{
-		report.close();
 		report.flush();
 	}
 	
