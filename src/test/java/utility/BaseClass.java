@@ -31,7 +31,9 @@ public class BaseClass
 	@BeforeSuite
 	public void setupReport()
 	{
-		report=new ExtentReports(System.getProperty("user.dir")+"\\Reports\\Salesforce"+Helper.getCurrentDateTime()+".html");
+		String reportpath=System.getProperty("user.dir")+"\\Reports\\Salesforce"+Helper.getCurrentDateTime()+".html";
+		report=new ExtentReports(reportpath);
+		System.out.println("================After execution report can be checked at "+reportpath);
 	}
 	
 	
