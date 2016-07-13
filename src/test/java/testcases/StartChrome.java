@@ -24,8 +24,11 @@ public class StartChrome extends MobileBaseClass
     	DesiredCapabilities cap=DesiredCapabilities.android();
     	
     	cap.setCapability("platformVersion","5.1.1");
+    	
     	cap.setCapability("platformName","Android");
+    	
     	cap.setCapability("deviceName","b7b8b8a8");
+    	
     	cap.setCapability(MobileCapabilityType.BROWSER_NAME,BrowserType.CHROME);
     	try 
     	{
@@ -39,6 +42,7 @@ public class StartChrome extends MobileBaseClass
 			
 		}
     	 MobileBaseClass.logger=report.startTest("Test Salesforce on Mobile Chrome");
+    	 
     	 SalesforceLoginPage login=PageFactory.initElements(driver, SalesforceLoginPage.class);
     	 
     	 login.loginToMobileSalesforce();

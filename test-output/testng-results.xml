@@ -2,15 +2,31 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="43622" started-at="2016-07-10T17:48:55Z" finished-at="2016-07-10T17:49:39Z">
+  <suite name="Default suite" duration-ms="55524" started-at="2016-07-13T15:47:19Z" finished-at="2016-07-13T15:48:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="43622" started-at="2016-07-10T17:48:55Z" finished-at="2016-07-10T17:49:39Z">
+    <test name="Default test" duration-ms="55524" started-at="2016-07-13T15:47:19Z" finished-at="2016-07-13T15:48:14Z">
       <class name="testcases.StartApplication">
-        <test-method status="PASS" signature="test1()[pri:0, instance:testcases.StartApplication@1888ff2c]" name="test1" duration-ms="43548" started-at="2016-07-10T23:18:55Z" finished-at="2016-07-10T23:19:39Z">
+        <test-method status="PASS" signature="setupReport()[pri:0, instance:testcases.StartApplication@5ba23b66]" name="setupReport" is-config="true" duration-ms="423" started-at="2016-07-13T21:17:18Z" finished-at="2016-07-13T21:17:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:testcases.StartApplication@5ba23b66]" name="test1" duration-ms="55479" started-at="2016-07-13T21:17:19Z" finished-at="2016-07-13T21:18:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="tearDownReport()[pri:0, instance:testcases.StartApplication@5ba23b66]" name="tearDownReport" is-config="true" duration-ms="11" started-at="2016-07-13T21:18:14Z" finished-at="2016-07-13T21:18:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownReport -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.StartApplication@5ba23b66]" name="tearDown" is-config="true" duration-ms="1" started-at="2016-07-13T21:18:14Z" finished-at="2016-07-13T21:18:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="generateReport()[pri:0, instance:testcases.StartApplication@5ba23b66]" name="generateReport" is-config="true" duration-ms="1155" started-at="2016-07-13T21:18:14Z" finished-at="2016-07-13T21:18:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
       </class> <!-- testcases.StartApplication -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

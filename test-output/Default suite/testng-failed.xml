@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testcases.StartChrome">
+      <class name="testcases.StartApplication">
         <methods>
+          <include name="generateReport"/>
+          <include name="tearDown"/>
           <include name="test1"/>
+          <include name="setupReport"/>
+          <include name="tearDownReport"/>
         </methods>
-      </class> <!-- testcases.StartChrome -->
+      </class> <!-- testcases.StartApplication -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

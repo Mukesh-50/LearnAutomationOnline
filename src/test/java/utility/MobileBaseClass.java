@@ -25,7 +25,7 @@ public class MobileBaseClass
 	@AfterMethod
 	public void tearDownReport()
 	{
-		report.endTest(logger);
+		report.endTest(MobileBaseClass.logger);
 		
 		
 	}
@@ -33,7 +33,7 @@ public class MobileBaseClass
 	@AfterTest
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 		
 	}
 	
